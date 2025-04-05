@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Source Code Pro", monospace;
+
+  --gray: #536878;
+  --pearl: #EAE0C8;
+  --yellow: #f0c45f;
+  --green: #7fb84b;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+  padding: 1rem;
+  background-color: var(--gray);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 3rem;
+    color: var(--pearl);
   }
-  to {
-    transform: rotate(360deg);
+
+  .inputBtnContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .inputTermo {
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--pearl);
+    color: var(--gray);
+    box-shadow: 10px 10px  rgba(0, 0, 0, 0.3);
+  }
+
+  .inputTermo:focus {
+    outline: none;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.tryContainer {
+  margin: 1.5rem;
+  color: var(--gray);
+
+  .letterSpan {
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
